@@ -39,8 +39,8 @@
         GiphyAJAXCall.addEventListener('load', e => {
             const rawData = e.target.response;
             const parsedData = JSON.parse(rawData);
-            console.log(parseData);
-            pushToDOM(parseData);
+            console.log(parsedData);
+            pushToDOM(parsedData);
         });
     };
 

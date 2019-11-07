@@ -1,10 +1,6 @@
-function includeJS(jsFilePath) {
-    const js = document.createElement("script");
-    js.type = "text/javascript";
-    js.src = jsFilePath;
-    document.body.appendChild(js);
-};
-includeJS('./key.js');
+// const keys = require('./key');
+
+const API_KEY = "본인 API key 적어주세요!";
 
 const button = document.querySelector("#js-button");
 const inputArea = document.querySelector("#js-input");
@@ -22,26 +18,13 @@ function searchAndPush(keyword) {
     const rawData = e.target.response;
     const parsedData = JSON.parse(rawData);
     console.log(parsedData);
-    pushToDOM(parsedData);
   });
 };
-
-// DOM 그리기
-function pushToDOM(parsedData) {
-  resultArea.innerHTML = null;
-  const dataSet = parsedData.data;
-
-  dataSet.forEach(imageData => {
-    const imageURL = imageData.images.fixed_height.url;
-    const alt = imageData.title;
-    resultArea.innerHTML += `<img src="${imageURL}" alt="${alt}" />`
-  });
-}
 
 button.addEventListener('click', () => {
   searchAndPush(inputArea.value);
 });
 
-inputArea.addEventListener('keypress', e => {
+button.addEventListener('keypress', e => {
   if (e.which === 13) searchAndPush(inputArea.value);
 });
