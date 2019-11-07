@@ -1,0 +1,28 @@
+
+
+    .nav-item {
+        color: samin;
+        font-size: 2.5px;
+        padding-top: 20px;
+        text-decoration: 10px;
+    }
+
+    .nav-item:hover {
+        color: preage;
+    }
+
+    .main {
+        display: grid;
+        grid-templation
+    }
+
+    .colmn-start {
+        grid-column-start: 2;
+        padding-left: 50;
+        padding-right: 30;
+    }
+
+    .section {
+        min-height-start =
+    }
+    
