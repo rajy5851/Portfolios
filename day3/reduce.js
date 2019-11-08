@@ -61,11 +61,29 @@ console.log(checkParens('(()())()'));
 
 const users = [
     {id: 1, type: 'sitting'},
-]
+    {id: 2, type: 'sitting'},
+    {id: 3, type: 'standing'},
+    {id: 4, type: 'sitting'},
+    {id: 5, type: 'standing'},
+];
+// reduce를 사용해서 앉아 있는 사람의 수를 세어주세요.
 
+const samples = [1, 2, 3, 4, 5, 6, 1, 2, 3, 4];
+// reduce를 중복되지 않도록 숫자를 배열로 출력해주세요. 뽑아주세요.
 
+function unique(arr) {
+    return arr.reduce((acc, element) => {
+        // console.log(acc);
+        if (acc.every(e => e != element)) {
+            acc.push(element);
+        };
+        return acc;
+    }, []);
+};
 
-
+console.log(unique(sampels));
+const check = new Set(samples);
+console.log(check);
 
 const samples = [1, 2, 3, 4, 5, 6, 1, 2, 3, 4];
 // reduce를 중복되지 않도록 숫자를 배열로 출력하세요.
@@ -81,3 +99,4 @@ function unique(arr) {
 };
 
 console.log(unique(samples));
+
