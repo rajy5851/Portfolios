@@ -13,4 +13,4 @@ function unique(arr) {
 
 console.log(unique(samples));
 const check = new Set(samples);
-// console.log(check);
+console.log(check);
